@@ -4,7 +4,7 @@ SRC := $(CWD)/src
 BIB := $(CWD)/bib
 OUT := $(CWD)/out
 
-# Compiles with xelatex, lualatex but styling not working
+# Compiles with lualatex. Does not compile with xelatex.
 ENGINE := pdflatex
 
 # Every source .tex file should correspond to a .pdf output file

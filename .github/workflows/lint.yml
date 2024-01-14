@@ -1,0 +1,24 @@
+name: Lint
+
+on: push
+
+jobs:
+
+  lint:
+
+    name: lint
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      # Checks out repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Install ChkTeX
+      - name: Install ChkTeX
+        run: sudo apt-get install chktex
+
+      # Runs ChkTeX
+      - name: Run ChkTeX
+        run: chktex -l ./src/.chktexrc ./src/*.tex
